@@ -1,0 +1,10 @@
+#colophon {
+
+    &.bg-noise::before {
+        z-index: 1;
+    }
+}
+
+.wp-block-social-link {
+    border-radius: var(--wp--custom--border-radius--md);
+}

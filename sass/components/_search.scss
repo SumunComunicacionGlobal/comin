@@ -1,0 +1,7 @@
+.wp-block-search__inside-wrapper {
+	
+	input[type="search"] {
+		border: 1px solid var(--wp--preset--color--foreground);
+		border-radius: var(--wp--custom--border-radius--rounded);
+	}
+}

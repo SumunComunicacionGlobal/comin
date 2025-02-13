@@ -1,0 +1,17 @@
+.wp-block-post-title,
+.wp-block-heading {
+    a {
+	    text-decoration: none;
+    }
+}
+
+[class*="has-heading-"][class*="-font-size"] {
+    line-height: var(--wp--custom--line-height--tiny);
+    font-family: var(--wp--preset--font-family--font-heading);
+}
+
+b, strong {
+    font-weight: var(--wp--custom--font-weight--bold);
+}
+
+

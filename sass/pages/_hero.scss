@@ -1,0 +1,30 @@
+#masthead {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    //top: 0;
+    color: white;
+    transition: .5s ease-in-out;
+    
+    .custom-logo {
+        transition: max-width .5s ease-in-out;
+    }
+
+    a.wp-block-navigation-item__content {
+        &:hover {
+            color: var(--wp--preset--color--tertiary)
+        }
+    }
+
+    .scrolled & {
+        background-color: var(--wp--preset--color--neutral-100);
+
+        .custom-logo {
+            max-width: 160px;
+        }
+    }
+}
+
+.home #hero {
+    position: relative;
+}

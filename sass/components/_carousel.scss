@@ -1,0 +1,33 @@
+.wp-block-cb-carousel {
+
+    &.slick-dotted .slick-slide {
+        padding-bottom: var(--wp--preset--spacing--40);
+    }
+
+    .slick-dots {
+        bottom: auto;
+        top: -3rem;
+
+        
+        li {
+
+            &.slick-active button {
+                &:before {
+                    color: #ffffff;
+                    opacity: 1;
+                }
+            }
+
+            
+            button {
+            
+                &:before {
+                    font-size: 1rem;
+                    color: #ffffff;
+                    //opacity: 1;
+                }
+            }
+        }
+    }
+
+}

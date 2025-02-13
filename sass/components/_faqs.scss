@@ -1,0 +1,50 @@
+.rank-math-list {
+    display: grid;
+    gap: var(--wp--custom--layout--block-gap);
+
+    .rank-math-list-item {
+        box-shadow: var(--wp--preset--shadow--shadow-md);
+        padding: var(--wp--preset--spacing--10) var(--wp--custom--layout--block-gap);
+        border-radius: var(--wp--custom--border-radius--lg);
+        border: 1px solid #C5C2BC;
+        background-color: var(--wp--preset--color--background);
+
+        .rank-math-question {
+            font-size: var(--wp--preset--font-size--heading-4);
+            position: relative;
+            width: 100%;
+            
+
+            &:hover {
+                cursor: pointer;
+            }
+            
+            &::after {
+                content: url(./assets/icons/icon-add.svg);
+                right: -1.5rem;
+                top: 0;
+                position: absolute;
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+        }
+
+        .rank-math-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1s cubic-bezier(0.4, 0, 1, 1);
+            
+        }
+
+        &.active {
+
+            .rank-math-answer {
+                max-height: 100vh;
+            }
+    
+            .rank-math-question::after {
+                content: url(./assets/icons/icon-minus.svg);
+            }
+        }
+    }
+}

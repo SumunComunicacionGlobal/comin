@@ -1,0 +1,109 @@
+@use '../abstracts/mixins' as *;
+
+main {
+    animation: bodyAnimation ease-in-out 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes bodyAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes move-up-block {
+	0% {
+		transform: translateY(-10rem);
+	}
+
+	100% {
+		transform: translateY(1rem);	
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+  
+        .move-up-block {
+            animation: move-up-block ease-in-out both;
+            animation-timeline: view();
+            transform-origin: center; /* Ajusta el punto de origen según tus necesidades */
+        }
+
+        p.scroll--reveal-text {
+            animation: text steps(var(--n, 100)) both;
+            animation-timeline: view();
+            animation-range: entry 100% cover 80%;
+        
+            span {
+                color: transparent;
+                background: 
+                /* highlight text */
+                linear-gradient(90deg, var(--wp--preset--color--background) 0 0) 
+                    0/ calc(var(--k)*1ch) no-repeat text
+                /* faded text */
+                var(--wp--preset--color--primary);
+            }
+        }
+    }
+}
+
+.bg-noise {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        background-image: url(./assets/img/bg-noise.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        mix-blend-mode: soft-light;
+        pointer-events: none; /* Asegura que no interfiera con el contenido */
+        z-index: 1;
+    }
+
+    &.wp-block-cover {
+        &::before {
+            opacity: 0.9;
+        }
+    }
+}
+
+.team-scroll-h, .blog-scroll-h {
+
+    .is-style-group-horizontal-scroll {
+        padding-left: 5dvw;
+
+        @media (max-width: 580px) { 
+            padding-left: 8vw;
+        }
+
+        @media (min-width:1580px) { 
+            padding-left: 8.6vw;
+        }
+
+        @media (min-width:1918px) { 
+            padding-left: 16vw;
+        }
+
+        @media (min-width:2048px) { 
+            padding-left: 18vw;
+        }
+
+        &:has(.wp-block-image) {
+            gap: 32px;
+        }
+    }
+}

@@ -1,8 +1,8 @@
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
 <!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-<main class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:cover {"overlayColor":"foreground","minHeight":656,"metadata":{"name":"Hero"},"style":{"spacing":{"padding":{"right":"0","left":"0","top":"10rem","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover" style="padding-top:10rem;padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0;min-height:656px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:heading {"level":1,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"small"} -->
+<main class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:cover {"url":"https://viral.sumun.net/comin/wp-content/uploads/2025/02/bg-hero-blog-comin.jpeg","id":1051,"dimRatio":60,"overlayColor":"foreground","isUserOverlayColor":true,"minHeight":656,"metadata":{"name":"Hero"},"className":"bg-noise","style":{"spacing":{"padding":{"right":"0","left":"0","top":"10rem","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-cover bg-noise" style="padding-top:10rem;padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0;min-height:656px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim-60 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-1051" alt="" src="https://viral.sumun.net/comin/wp-content/uploads/2025/02/bg-hero-blog-comin.jpeg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:heading {"level":1,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"small"} -->
 <h1 class="wp-block-heading has-small-font-size" style="text-transform:uppercase">Blog de asesoría y gestoría</h1>
 <!-- /wp:heading -->
 
@@ -37,22 +37,24 @@
 <!-- /wp:columns --></div></div>
 <!-- /wp:cover -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|80"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--80)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|80","left":"var:preset|spacing|80"}}}} -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|80","left":"var:preset|spacing|80"}}}} -->
 <div class="wp-block-columns"><!-- wp:column {"width":"44%"} -->
 <div class="wp-block-column" style="flex-basis:44%"><!-- wp:heading -->
 <h2 class="wp-block-heading"><strong>Actualidad</strong> fiscal, laboral y legal. Consejos ideas y buenos hábitos.</h2>
 <!-- /wp:heading --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"4%"} -->
-<div class="wp-block-column" style="flex-basis:4%"></div>
+<!-- wp:column {"width":"4%","className":"hidden-mobile hidden-tablet"} -->
+<div class="wp-block-column hidden-mobile hidden-tablet" style="flex-basis:4%"></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"width":""} -->
 <div class="wp-block-column"><!-- wp:search {"label":"Buscar","showLabel":false,"placeholder":"Buscar por palabra clave","buttonText":"Buscar","buttonPosition":"no-button"} /-->
 
-<!-- wp:categories /--></div>
+<!-- wp:group {"metadata":{"name":"Filter by"},"className":"filter-by","layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group filter-by"><!-- wp:categories {"style":{"layout":{"selfStretch":"fit","flexSize":null}}} /--></div>
+<!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
@@ -60,4 +62,6 @@
 <!-- wp:template-part {"slug":"loop-post","area":"uncategorized"} /--></main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer","area":"uncategorized"} /-->
+<!-- wp:block {"ref":510} /-->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","area":"uncategorized","className":"mt-0"} /-->

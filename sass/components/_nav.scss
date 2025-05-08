@@ -1,2 +1,29 @@
 @use '../abstracts/mixins' as *;
 
+
+@media ($below-mobile) {
+
+    ul.wp-block-navigation__container {
+        width: 100%;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open {
+        
+        .wp-block-navigation__responsive-container-content {
+            
+            .wp-block-navigation__container {
+                
+                & > .wp-block-navigation-item {
+                    border-bottom: 1px solid var(--wp--preset--color--neutral-30);
+                    width: 100%;
+                    padding-bottom: 1rem;
+                }
+            }
+
+            .has-child .wp-block-navigation__submenu-container {
+                gap: 1rem;
+                padding-left: 1rem !important;
+            }
+        }   
+    }
+}
